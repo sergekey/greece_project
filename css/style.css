@@ -1,0 +1,168 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 30px;
+    background-color: white
+}
+
+.shape {
+    background: rgb(6, 164, 255);
+    background-image: linear-gradient(0deg,
+    rgba(6, 164, 255, 0.1) 0%,
+    rgb(255, 255, 255) 100%), url(../img/church-2020258_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    position: relative;
+    padding-right: 10%;
+    box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.textblock {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+}
+
+.textblock__upper {
+    display: block;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: white;
+    text-shadow: 0 1px 2px #000000;
+
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+}
+
+.textblock__lower {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 10px;
+    color: rgb(4, 74, 165);
+    padding: 15px 30px;
+    text-align: center;
+    margin-top: 18px;
+
+    animation-name: moveTop;
+    animation-duration: 5s;
+    transition: .2s;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+
+    @keyframes moveTop {
+        0% {
+        opacity: 0;
+        transform: translateY(100px) /*rotate(-5deg )*/;
+        }
+
+        30% {
+            opacity: 0.7;
+        }
+
+        100% {
+        opacity: 1;
+        transform: translate(0);
+        }
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    margin: 30px auto;
+    animation-name: moveCall;
+    animation-duration: 5s;
+    transition: .2s;
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.btn-white {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(4, 74, 165);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+@keyframes moveCall {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.circle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.circle:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.circle::after {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transition: .4s;
+}
+
+.circle:hover::after {
+    transform: scale(2.5);
+    opacity: 0;
+}
+
+.circle-animated {
+    animation: moveCall 2s ease-out 4s;
+    animation-fill-mode: backwards;
+}
+
+.article {
+    background-color: white;
+    width: 100%;
+    height: 60%;
+}
