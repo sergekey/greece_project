@@ -1,0 +1,22 @@
+{
+  "name": "greece_project",
+  "version": "1.0.0",
+  "description": "one page site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergekey/greece_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergekey/greece_project/issues"
+  },
+  "homepage": "https://github.com/sergekey/greece_project#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
